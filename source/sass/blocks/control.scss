@@ -1,0 +1,105 @@
+.control {
+  position: absolute;
+  width: 16px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 22px;
+    background-color: $control-gray;
+  }
+
+  &:hover {
+
+    &::before,
+    &::after {
+      background-color: rgba($gradient-red, 0.8);
+    }
+  }
+
+  &:focus {
+    filter: brightness(50%);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 10px;
+    height: 19px;
+
+    &::before,
+    &::after {
+      height: 14px;
+    }
+  }
+}
+
+.control--left {
+  left: 0;
+
+  &::before,
+  &::after {
+    left: 7px;
+  }
+
+  &::before {
+    top: -3px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    bottom: -3px;
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: $mobile-width) {
+
+    &::before,
+    &::after {
+      left: 5px;
+    }
+
+    &::after {
+      bottom: -2px;
+    }
+  }
+}
+
+.control--right {
+  right: 0;
+
+  &::before,
+  &::after {
+    right: 7px;
+  }
+
+  &::before {
+    top: -3px;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    bottom: -3px;
+    transform: rotate(45deg);
+  }
+
+  @media (max-width: $mobile-width) {
+
+    &::before,
+    &::after {
+      right: 5px;
+    }
+
+    &::after {
+      bottom: -2px;
+    }
+  }
+}

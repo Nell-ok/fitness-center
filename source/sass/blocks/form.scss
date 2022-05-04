@@ -1,0 +1,120 @@
+.form {
+  max-width: 410px;
+  margin-left: auto;
+  padding: 57px 170px 69px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 66px 163px 69px 133px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 67px 15px 69px;
+  }
+}
+
+.form h2 {
+  margin-bottom: 35px;
+  line-height: 64px;
+  color: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    text-align: start;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.form__item {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.form__item input {
+  min-width: 190px;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 1px solid $border-contacts;
+  color: $background-gray;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+
+  &::placeholder {
+    color: $basic-white;
+  }
+
+  &:hover {
+    border-color: $price-dark;
+
+    &::placeholder {
+      color: $price-dark;
+    }
+  }
+
+  &:focus {
+    color: rgba($basic-white, 0.5);
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: calc(206px + (394 - 206) * ((100vw - 768px) / (1199 - 768)));
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: calc(290px + (737 - 290) * ((100vw - 320px) / (767 - 320)));
+  }
+}
+
+.form__button {
+  min-width: 410px;
+  margin-top: 28px;
+  padding: 16px 10px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  background-color: transparent;
+  border: 3px solid $basic-white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &:hover {
+    border-color: $price-dark;
+    color: $price-dark;
+  }
+
+  &:focus {
+    filter: brightness(50%);
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: calc(472px + (903 - 472) * ((100vw - 768px) / (1199 - 768)));
+    margin-top: 29px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: calc(290px + (737 - 290) * ((100vw - 320px) / (767 - 320)));
+    margin-top: 8px;
+  }
+}

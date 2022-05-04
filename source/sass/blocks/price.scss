@@ -1,0 +1,228 @@
+.price {
+  padding: 116px 0 120px;
+  background-color: $background-gray;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 287px;
+    height: 494px;
+    bottom: -150px;
+    right: 0;
+    background: url("../img/background-price.png") no-repeat;
+    z-index: 0;
+
+    @media (min-width: $desktop-only) {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background-price@2x.png");
+      }
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 96px 0 100px;
+
+    &::after {
+      width: 347px;
+      height: 444px;
+      bottom: -125px;
+      background: url("../img/background-price-tablet.png") no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background-price-tablet@2x.png");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 67px 0 35px;
+
+    &::after {
+      background: none;
+    }
+  }
+}
+
+.price__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    max-width: calc(100% - 30px);
+  }
+}
+
+.price__catalog {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.price__list {
+  margin: 0;
+  padding: 39px 0 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 45px;
+    flex-direction: column;
+    align-items: center;
+    gap: 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 34px;
+    gap: 0;
+  }
+}
+
+.price__list--hidden {
+  display: none;
+}
+
+.price__item {
+  max-width: 360px;
+  background-color: $basic-white;
+  z-index: 1;
+
+  &:hover {
+    background: linear-gradient(to right bottom, $gradient-red 0%, $gradient-blue 100%);
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 442px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+.price__item-wrapper {
+  margin: 7px;
+  padding: 55px 70px 61px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 111px;
+    padding-right: 111px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: calc(206px + (653 - 206) * ((100vw - 320px) / (767 - 320)));
+    padding: 44px 35px 48px;
+  }
+}
+
+.price__item h3 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 29px;
+  font-weight: 700;
+  color: $basic-dark;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.price__item span {
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $price-dark;
+  text-align: center;
+}
+
+.price__item p {
+  margin: 0;
+  padding: 66px 44px 34px 0;
+  position: relative;
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: 700;
+  color: $price-blue;
+  z-index: 10;
+
+  &::before {
+    content: attr(data-price);
+    position: absolute;
+    left: -18px;
+    bottom: 29px;
+    font-size: 100px;
+    line-height: 150px;
+    font-weight: 700;
+    color: $price-gray;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 42px;
+    bottom: 59px;
+    right: 0;
+    background: url("../img/ruble.svg") no-repeat;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 53px 31px 31px 0;
+    font-size: 48px;
+    line-height: 72px;
+
+    &::before {
+      bottom: 26px;
+      font-size: 80px;
+      line-height: 120px;
+    }
+
+    &::after {
+      width: 24px;
+      height: 33px;
+      bottom: 50px;
+      right: -4px;
+      background: url("../img/ruble-mobile.svg") no-repeat;
+    }
+  }
+}
+
+.price__button {
+  min-width: 182px;
+  padding: 23px 10px;
+  color: $basic-dark;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px solid $basic-dark;
+
+  &:hover {
+    padding: 25px 12px;
+    color: $basic-white;
+    border: none;
+    background: linear-gradient(to right bottom, $gradient-red 0%, $gradient-blue 100%);
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.price__list--nojs {
+  display: none;
+}

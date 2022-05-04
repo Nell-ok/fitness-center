@@ -1,0 +1,56 @@
+.coaches {
+  padding-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 70px;
+  }
+}
+
+.coaches__wrapper-text {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-bottom: 53px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    max-width: 1160px;
+    padding-bottom: 44px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 290px;
+    padding-bottom: 45px;
+  }
+}
+
+.coaches__wrapper-slider {
+  max-width: 1270px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    max-width: 678px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 290px;
+  }
+}
+
+.coaches__button-left,
+.coaches__button-right {
+  bottom: 131px;
+
+  @media (max-width: $mobile-width) {
+    bottom: 127px;
+  }
+}

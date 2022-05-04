@@ -1,0 +1,12 @@
+.page-wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    max-width: 678px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 290px;
+  }
+}
