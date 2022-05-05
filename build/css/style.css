@@ -1441,7 +1441,7 @@ img {
 }
 
 .control--left {
-  left: 1px;
+  left: calc(3px + (0 - 3) * ((100vw - 1200px) / (1366 - 1200)));
 }
 
 .control--left::before,
@@ -1464,7 +1464,7 @@ img {
 }
 
 .control--right {
-  right: 1px;
+  right: calc(3px + (0 - 3) * ((100vw - 1200px) / (1366 - 1200)));
 }
 
 .control--right::before,
@@ -1531,6 +1531,7 @@ img {
   overflow-y: hidden;
   overflow-x: auto;
   scrollbar-width: none;
+  background-color: #1c3374;
 }
 
 .feedback__slider::-webkit-scrollbar {
@@ -2883,6 +2884,14 @@ img {
     max-width: 678px;
   }
 
+  .control--left {
+    left: 0;
+  }
+
+  .control--right {
+    right: 0;
+  }
+
   .feedback {
     padding-bottom: 100px;
   }
@@ -3436,13 +3445,18 @@ img {
   }
 
   .slider {
-    max-width: 226px;
-    height: 274px;
+    max-width: calc(226px + (677 - 226) * ((100vw - 320px) / (767 - 320)));
+    height: calc(274px + (820 - 274) * ((100vw - 320px) / (767 - 320)));
   }
 
   .slider__wrapper-photo {
-    width: 226px;
-    height: 274px;
+    width: calc(226px + (677 - 226) * ((100vw - 320px) / (767 - 320)));
+    height: calc(274px + (820 - 274) * ((100vw - 320px) / (767 - 320)));
+  }
+
+  .slider__wrapper-photo img {
+    -o-object-position: top;
+    object-position: top;
   }
 
   .slider__item span {
@@ -3450,7 +3464,10 @@ img {
   }
 
   .tooltip {
-    padding: 42px 33px 45px 34px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 40px 33px 27px 34px;
   }
 
   .tooltip h3 {
@@ -3485,7 +3502,7 @@ img {
 
   .coaches__button-left,
   .coaches__button-right {
-    bottom: 127px;
+    bottom: 46.35%;
   }
 
   .control {
@@ -3533,12 +3550,13 @@ img {
   }
 
   .feedback__slider {
-    max-width: 226px;
+    max-width: calc(226px + (677 - 226) * ((100vw - 320px) / (767 - 320)));
     min-height: 335px;
   }
 
   .feedback__card {
-    width: 226px;
+    width: calc(226px + (677 - 226) * ((100vw - 320px) / (767 - 320)));
+    min-height: 335px;
     padding: 39px 25px 35px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3571,7 +3589,7 @@ img {
     line-height: 26px;
     position: absolute;
     top: 48px;
-    right: 41px;
+    left: 124px;
   }
 
   .feedback__text br {

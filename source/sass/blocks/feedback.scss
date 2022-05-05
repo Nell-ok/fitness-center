@@ -65,6 +65,7 @@
   overflow-y: hidden;
   overflow-x: auto;
   scrollbar-width: none;
+  background-color: $background-blue;
 
   &::-webkit-scrollbar {
     display: none;
@@ -75,7 +76,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    max-width: 226px;
+    max-width: calc(226px + (677 - 226) * ((100vw - 320px) / (767 - 320)));
     min-height: 335px;
   }
 }
@@ -103,7 +104,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 226px;
+    width: calc(226px + (677 - 226) * ((100vw - 320px) / (767 - 320)));
+    min-height: 335px;
     padding: 39px 25px 35px;
     display: flex;
     flex-direction: column;
@@ -166,7 +168,7 @@
     line-height: 26px;
     position: absolute;
     top: 48px;
-    right: 41px;
+    left: 124px;
   }
 }
 

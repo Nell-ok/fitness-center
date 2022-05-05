@@ -16,8 +16,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    max-width: 226px;
-    height: 274px;
+    max-width: calc(226px + (677 - 226) * ((100vw - 320px) / (767 - 320)));
+    height: calc(274px + (820 - 274) * ((100vw - 320px) / (767 - 320)));
   }
 }
 
@@ -42,8 +42,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 226px;
-    height: 274px;
+    width: calc(226px + (677 - 226) * ((100vw - 320px) / (767 - 320)));
+    height: calc(274px + (820 - 274) * ((100vw - 320px) / (767 - 320)));
   }
 }
 
@@ -53,6 +53,10 @@
   object-fit: cover;
   text-indent: -100vw;
   display: block;
+
+  @media (max-width: $mobile-width) {
+    object-position: top;
+  }
 }
 
 .slider__item span {
