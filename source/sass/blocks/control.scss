@@ -43,7 +43,7 @@
 }
 
 .control--left {
-  left: 0;
+  left: 1px;
 
   &::before,
   &::after {
@@ -74,7 +74,7 @@
 }
 
 .control--right {
-  right: 0;
+  right: 1px;
 
   &::before,
   &::after {

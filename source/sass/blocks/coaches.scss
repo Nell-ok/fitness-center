@@ -42,7 +42,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    max-width: 290px;
+    max-width: calc(290px + (737 - 290) * ((100vw - 320px) / (767 - 320)));
   }
 }
 

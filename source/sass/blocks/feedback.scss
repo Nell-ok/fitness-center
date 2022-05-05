@@ -52,13 +52,13 @@
   }
 
   @media (max-width: $mobile-width) {
-    max-width: 290px;
+    max-width: calc(290px + (737 - 290) * ((100vw - 320px) / (767 - 320)));
   }
 }
 
 .feedback__slider {
   max-width: 560px;
-  height: 242px;
+  min-height: 242px;
   margin: 0 auto;
   box-shadow: 0 0 40px rgba($background-blue, 0.2);
   position: relative;
@@ -76,7 +76,7 @@
 
   @media (max-width: $mobile-width) {
     max-width: 226px;
-    height: 335px;
+    min-height: 335px;
   }
 }
 
@@ -190,9 +190,9 @@
 
 .feedback__button-left,
 .feedback__button-right {
-  bottom: 105px;
+  bottom: 43.4%;
 
   @media (max-width: $mobile-width) {
-    bottom: 157px;
+    bottom: 47%;
   }
 }
