@@ -4,6 +4,12 @@
 
 ---
 
+# ![Image of project «Fitness Center»](https://im.wampi.ru/2022/09/18/FitnessCenter.md.png)
+
+* [Подробнее](https://center-fitness.netlify.app/)
+
+---
+
 ## Краткая инструкция по работе
 Для начала работы у вас должент быть установлен **Node.js**
 
